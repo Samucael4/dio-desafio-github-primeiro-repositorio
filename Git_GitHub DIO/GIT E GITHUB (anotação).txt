@@ -1,0 +1,149 @@
+COM O GIT VEREMOS:
+-COMO MUDAR DE PASTAS
+-LISTAR AS PASTAS
+-CRIAR PASTAS / ARQUIVOS
+-DELETAR PASTAS / ARQUIVOS
+
+
+## AULA 3:
+WINDOWS:
+-cd                                     leva ate o local DO DIRETORIO
+-dir:                                   traz uma listas de pastas no diretório que está situado
+-mkdir  (nome)               cria uma pasta
+-del / rmdir                     o primeiro deleta arquivos dentro do repositório(pasta) mas não a pasta  o segundo deleta o repositório              
+                                          inteiro  
+-cd ..                                 para voltar 
+-cls                                    limpar o terminal
+-echo                                printa o que digitar
+-   >                                    vai jogar em um arquivo
+
+Dir  cd /    dir  cd Windows  cd ..  cls  mkdir workspace  cd workspace  echo hello > hello.txt  dir  cls 
+Del workspace  S  cls  dir  cd workspace  dir  setinha para cima ate encontrar comando echo hello.txt  dir 
+cd..  cls  dir  rmdir workspace /S /Q
+
+
+
+## AULA 3
+ALGUNS CONTEUDOS A MAIS SEM APROFUNDAMENTO:
+-SHA1 (ALGORITMO DE HASH SEGURO), É UM CONJUNTO DE FUNÇÕES HASH CRIPTOGRAFADAS PROJETADAS PELA NSA (AGENCIA DE SEGURANÇA NACIONAL DOS EUA)
+EX: 	echo “ola mundo” | openssl sha1
+	> (stdin)= sdf99sdhsth0798jh7809sj7s0809srjy7809sryj (40digitos)
+No git bash digite: openssl sha1 texto.txt
+-OBJETOS FUNDAMENTAIS (BLOBES TREES E COMMITS) (VER VIDEO OU TEXTO A RESPEITO)
+-SISTEMA DISTRIBUIDO
+-SEGURANÇA
+
+
+
+## AULA 4:
+-INICIAR O GIT  (git init) (CRIA REPOSITORIO)
+-INICIAR O VERSIONAMENTO (git add)
+-CRIAR UM COMMIT (git commit)
+
+PASSO A PASSO:
+Diretório c , git bash here , ls (listar) , cd workspace , crtrl L, mkdir livro-receitas , ls , apaga tela, 
+
+cd livro-receitas 
+
+git init  
+
+ls –a, 
+
+cd .git/ 
+
+ls 
+
+cd .. 
+
+$ git config --global user.name "Fulano de Tal"
+$ git config --global user.email fulanodetal@exemplo.br
+
+Markdown (.md)
+
+Digite a receita
+
+Salvar receita
+
+Voltar no terminal git bash
+
+Git add *
+
+Git commit –m “commit inicial”
+
+
+
+## AULA 5: REPOSITORIOS , DIRETORIOS
+
+-UNTRACKED 
+
+-TRACKED (UNMODIFIED, MODIFIED, STAGED)
+
+UNMODIFIED (NÃO MODIFICADO)
+MODIFIED (MODIFICADO)
+STAGED (ARQUIVOS SE “PREPARANDO” PARA OUTRO AGRUPAMENTO)
+ARQUIVO UNTRACKED , DIGITEI GIT ADD, FOI DIRETO PARA STAGED, 
+
+ARQUIVO UNMODIFIED VAI PARA MODIFIED QUANDO O GIT COMPARA O SHA1
+
+ARQUIVO MODIFIED, DIGITA GIT ADD, ELE VAI PARA STAGED
+
+ARQUIVO UNMODIFIED É REMOVIDO, ELE VOLTA PARA UNTRACKED
+
+O ARQUIVO NO STAGED ESTÁ SE PREPARANDO PARA FAZER UM COMMIT, DIGITE GIT COMMIT –M “DESCRIÇÃO” , E VOLTA PARA UNMODIFIED PARA RECOMEÇAR O PROCESSO, CRIANDO UM SNAPSHOT
+
+
+-Ao usar o git init, estmaos criando um repositório no git dentro daquele diretório.
+QUANDO FAZ COMMIT VIRA REPOSITORIO LOCAL, QUE POR SUA VEZ PODE SER PUSH PARA REPOSITORIO REMOTO
+
+(NO GIT BASH):
+LIVRO DE RECEITAS,
+
+GIT STATUS (DIZ SE É UNTRACKED, MODIFIED, STAGED..)
+
+MKDIR RECEITAS2
+
+LS
+
+MV RECEITAS.MD ./RECEITAS2/    (MOVE ARQUIVO PARA OUTRA PASTA)
+
+LS
+
+GIT STATUS
+
+GIT ADD RECEITAS.MD RECEITAS2/  (MOVEU PARA STAGED E AGR PRECISA SER COMITADO)
+
+GIT STATUS
+
+GIT COMMIT –M “CRIA PASTA REITAS2, E MOVE ARQUIVO RECEITAS.MD PARA RECEITAS2”
+
+GIT STATUS
+
+ECHO > README.MD (NOVO ARQUIVO ADICIONADO NO REPOSITORIO)
+
+GIT STATUS (VAI APARECER UNTRACKED)
+
+(DIGITAR NO ARQUIVO CRIADO ALGO E SALVAR) (VAI PARA MODIFIED)
+
+GIT ADD * (VAI PARA STAGED E O ASTERISCO INDICA TUDO QUE FOI MODIFICADO)
+
+GIT STATUS (VAI MOSTRAR MUDANÇAS PARA SEREM COMITADAS)
+
+GIT COMMIT –M “ADICIONEI O INDEX README”
+
+
+
+## AULA 6: CRIAR GITHUB, CRIAR UM REPOSITORIO REMOTO E EMPURRAR CODIGO DO REPOSITORIO LOCAL PARA O REMOTO
+
+O IDEAL É QUE O USER NAME E EMAIL DO GIT SEJA IGUAIS AO DO GITHUB, NESSE CASO, SE ALGUNS DELES ESTIVER DIFERENTEN, DIGITE NO GIT BASH O SEGUINTE:
+Git config –list (para ver qual usuário e email está)
+Git config --global --unset user.name
+Git config --global --unset user.email
+
+AGORA NO GIT HUB:
+CRIAR REPOSITORIO E PEGAR O LINK
+NO GIT BASH DIGITAR: git remote origin (link pego no repositório)
+Git push origin máster    (vai pedir credenciais se tiver uma)
+
+
+## AULA 7 : RESOLVENDO CONFLITOS
+Git pull origin master
