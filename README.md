@@ -1,4 +1,5 @@
 # dio-desafio-github-primeiro-repositorio
+##ESTE REPOSITORIO SERVIU APENAS PARA FAZER O PRIMEIRO COMMIT, SALVANDO ALGUMAS ANOTAÇÕES DAS AULAS
 ## Desafio de Projeto sobre Git/GitHub
 ### TESTE PARA GIT/GITHUB 
 ### ANOTAÇÕES BOOTCAMP DIO DE JAVA (GFT)
